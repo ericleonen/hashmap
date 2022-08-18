@@ -1,7 +1,10 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouteGuard } from "../hooks/routing";
 
 const App = ({ Component, pageProps }: AppProps) => {
+    useRouteGuard(["/", "/login", "/sign-up", "/password-reset"]);
+
     return (
         <div>
             <Head>
@@ -10,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
             <Component {...pageProps} />
         </div>
-    )
+    );
 };
 
 export default App;
