@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
 import { SyntheticEvent, useState } from "react";
-import { registerWithEmailAndPassword } from "./api/auth";
+import { logInWithEmailAndPassword, registerWithEmailAndPassword } from "./api/auth";
 
 const Login = () => {
-    const [identifier, setIdentifier] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const router = useRouter();
 
     const handleSubmit = async (e: SyntheticEvent) => {
         e.preventDefault();
-        // await registerWithEmailAndPassword(name, email, password);
+        await logInWithEmailAndPassword(email, password);
         router.push("/home");
     };
 
@@ -19,8 +19,8 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
-                    value={identifier}
-                    onChange={({target}) => setIdentifier(target.value)}
+                    value={email}
+                    onChange={({target}) => setEmail(target.value)}
                 />
                 <input 
                     type="password" 

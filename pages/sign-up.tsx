@@ -1,5 +1,8 @@
 import { useRouter } from "next/router";
 import { SyntheticEvent, useState } from "react";
+import EmailInput from "../components/forms/EmailInput";
+import PasswordInput from "../components/forms/PasswordInput";
+import TextInput from "../components/forms/TextInput";
 import { registerWithEmailAndPassword } from "./api/auth";
 
 const SignUp = () => {
@@ -19,21 +22,14 @@ const SignUp = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
+                <TextInput 
+                    type="text"
+                    label="Name"
                     value={name}
-                    onChange={({target}) => setName(target.value)}
+                    setValue={setName}
                 />
-                <input 
-                    type="email" 
-                    value={email}
-                    onChange={({target}) => setEmail(target.value)}
-                />
-                <input 
-                    type="password" 
-                    value={password}
-                    onChange={({target}) => setPassword(target.value)}
-                />
+                <EmailInput email={email} setEmail={setEmail} />
+                <PasswordInput password={password} setPassword={setPassword} />
                 <input type="submit" />
             </form>
         </div>
