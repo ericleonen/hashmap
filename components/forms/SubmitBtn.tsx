@@ -7,7 +7,7 @@ const SubmitBtn = ({ children }: SubmitBtn) => {
         <input
             value={children} 
             type="submit"
-            className="mt-6 px-4 py-2 text-sm rounded-md bg-gradient-to-l from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800"
+            className="px-4 py-2 mt-6 text-sm transition-all rounded-md bg-gradient-to-l from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800"
         />
     );
 };

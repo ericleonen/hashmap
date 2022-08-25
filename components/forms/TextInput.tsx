@@ -16,7 +16,7 @@ const TextInput = ({ label, type, value, setValue, children }: TextInputProps) =
                     value={value}
                     onChange={({target}) => setValue(target.value)}
                     placeholder={label}
-                    className="px-4 py-2 text-sm bg-transparent border-2 rounded-md border-gray-100/10 focus:outline-none focus:border-white/40 placeholder-gray-200/30 hover:bg-white/5 focus:bg-white/5"
+                    className="px-4 py-2 text-sm transition-all bg-transparent border-2 rounded-md border-gray-100/10 focus:outline-none focus:border-white/40 placeholder-gray-200/30 hover:bg-white/5 focus:bg-white/5"
                 />
             </label>
         </div>
