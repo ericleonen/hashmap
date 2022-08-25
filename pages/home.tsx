@@ -1,11 +1,12 @@
+import TopBar from "../components/app/TopBar";
+import Page from "../components/general/Page";
 import { logout } from "./api/auth";
 
 const Home = () => {
     return (
-        <div>
-            Hey, it's the home
-            <button onClick={logout}>Logout</button>
-        </div>
+        <Page type="stack">
+            <TopBar />
+        </Page>
     );
 };
 
