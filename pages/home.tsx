@@ -1,4 +1,4 @@
-import CreateBtn from "../components/app/CreateBtn";
+import RecentSection from "../components/app/RecentSection";
 import SearchBar from "../components/app/SearchBar";
 import TopBar from "../components/app/TopBar";
 import Page from "../components/general/Page";
@@ -9,8 +9,8 @@ const Home = () => {
         <Page type="stack">
             <TopBar>
                 <SearchBar />
-                <CreateBtn />
             </TopBar>
+            <RecentSection />
         </Page>
     );
 };
