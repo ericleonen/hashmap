@@ -21,7 +21,7 @@ const Login = () => {
     const handleSubmit = async (e: SyntheticEvent) => {
         e.preventDefault();
         await logInWithEmailAndPassword(email, password);
-        router.push("/home");
+        router.push("/app");
     };
 
     return (

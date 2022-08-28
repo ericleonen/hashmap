@@ -23,7 +23,7 @@ const SignUp = () => {
         // TODO: need to check name, email, and password here
         e.preventDefault();
         await registerWithEmailAndPassword(name, email, password);
-        router.push("/home");
+        router.push("/app");
     };
 
     return (
